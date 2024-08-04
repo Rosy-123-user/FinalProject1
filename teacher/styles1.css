@@ -1,0 +1,285 @@
+/* Slide-In Page Styling */
+.slide-in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.slide-in-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+}
+
+.slide-in-content {
+    padding: 2em;
+    overflow-y: auto;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #ff5f5f;
+}
+
+/* Module Container Styling */
+.module-container {
+    display: flex;
+    height: 100%;
+}
+
+/* Module Sidebar Styling */
+.module-sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 1em;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+
+.module-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.module-sidebar ul li {
+    margin-bottom: 1em;
+}
+
+.module-sidebar ul li a {
+    color: #00796b;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em;
+    transition: background-color 0.3s;
+}
+
+.module-sidebar ul li a:hover {
+    background-color: #e0f7fa;
+}
+
+/* Nested List Styling */
+.module-sidebar ul ul {
+    margin-left: 1em;
+}
+
+.module-sidebar ul ul li a {
+    padding-left: 1em;
+}
+
+/* Module Content Styling */
+.module-content {
+    flex-grow: 1;
+    padding: 2em;
+}
+
+.content-section {
+    display: none;
+}
+
+/* Ensure Full Page Height for Teacher Page */
+body.teacher-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* University Name Styling */
+#university-name {
+    text-align: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Darker blue color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+section {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General Information Section */
+#general-info {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.info-item {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Module Section Styling */
+.module-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.module {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Activities Section Styling */
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.activity {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 300px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer for Teacher Page */
+body.teacher-page footer {
+    margin-top: auto;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}

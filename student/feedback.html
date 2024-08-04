@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Modules</a>
+                    <div class="dropdown-content">
+                        <a href="module1.html">Introduction to Computer Science</a>
+                        <a href="module2.html">Data Structures and Algorithms</a>
+                        <a href="module3.html">Operating Systems</a>
+                        <a href="module4.html">Database Systems</a>
+                        <a href="module5.html">Computer Networks</a>
+                        <a href="module6.html">Software Engineering</a>
+                        <a href="module7.html">Artificial Intelligence</a>
+                        <a href="module8.html">Web Development</a>
+                    </div>
+                </li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="discussions.html">Discussions</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="grades.html">Grades</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="feedback.html">Feedback</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="feedback">
+            <h2>Provide Feedback</h2>
+            <form>
+                <label for="module">Module:</label>
+                <select id="module" name="module">
+                    <option value="intro_to_cs">Introduction to Computer Science</option>
+                    <option value="data_structures">Data Structures and Algorithms</option>
+                    <option value="operating_systems">Operating Systems</option>
+                    <option value="database_systems">Database Systems</option>
+                    <option value="computer_networks">Computer Networks</option>
+                    <option value="software_engineering">Software Engineering</option>
+                    <option value="artificial_intelligence">Artificial Intelligence</option>
+                    <option value="web_development">Web Development</option>
+                </select>
+                <br>
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+                <br>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

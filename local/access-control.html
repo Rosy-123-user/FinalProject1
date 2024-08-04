@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div id="access-control-page" class="slide-in access-control-slide-in">
+        <div class="slide-in-header">
+            <h2>Access Control</h2>
+            <button class="close-button" onclick="closeSlideIn('access-control-page')">X</button>
+        </div>
+        <div class="slide-in-content">
+            <div class="details-header">
+                <input type="text" id="access-search-bar" placeholder="Search by name, role, or module...">
+                <button class="add-button">Add</button>
+            </div>
+            <div class="filters">
+                <label for="role-filter">Role:</label>
+                <select id="role-filter">
+                    <option value="">Select Role</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+                <label for="module-filter">Module:</label>
+                <select id="module-filter">
+                    <option value="">Select Module</option>
+                    <option value="module1">Module 1</option>
+                    <option value="module2">Module 2</option>
+                </select>
+                <button class="filter-button">Apply Filters</button>
+            </div>
+            <div class="access-list">
+                <!-- Access control items will be dynamically loaded here -->
+                <div class="access-item">
+                    <h4>John Doe - Teacher</h4>
+                    <p>Modules: Module 1, Module 2</p>
+                    <div class="access-actions">
+                        <button class="action-button">View</button>
+                        <button class="action-button">Edit</button>
+                        <button class="action-button">Revoke</button>
+                    </div>
+                </div>
+                <div class="access-item">
+                    <h4>Jane Smith - Student</h4>
+                    <p>Modules: Module 1</p>
+                    <div class="access-actions">
+                        <button class="action-button">View</button>
+                        <button class="action-button">Edit</button>
+                        <button class="action-button">Revoke</button>
+                    </div>
+                </div>
+                <!-- Add more access items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>

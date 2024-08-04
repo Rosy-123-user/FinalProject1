@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Teacher Portal</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body class="teacher-page">
+    <header>
+        <div class="logo">
+            <h1>E-Shuri - Teacher Portal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="teacher.html">Dashboard</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0)" onclick="openSlideIn('profile.html')">Profile</a>
+                        <a href="javascript:void(0)" onclick="openSlideIn('support.html')">Help/Support</a>
+                        <a href="javascript:void(0)" onclick="openSlideIn('settings.html')">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="university-name">
+        <h2>African Leadership University</h2>
+    </div>
+
+    <section id="general-info">
+        <h2>General Information</h2>
+        <div class="info-list">
+            <div class="info-item">Announcements will be shown here</div>
+            <div class="info-item">Office hour reminders will be shown here</div>
+            <div class="info-item">Message alerts will be shown here</div>
+        </div>
+    </section>
+
+    <section id="modules">
+        <h2>Modules You Teach</h2>
+        <div class="module-list">
+            <div class="module" onclick="loadModuleContent('intro-to-cs.html')">Introduction to Computer Science</div>
+            <div class="module" onclick="loadModuleContent('web-development.html')">Web Development</div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>Activities</h2>
+        <div class="activity-list">
+            <div class="activity" onclick="openSlideIn('request-support.html')">Request Support</div>
+            <div class="activity" onclick="openSlideIn('office-hours.html')">Office Hours</div>
+            <div class="activity" onclick="openSlideIn('messages-page')">Messages</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+
+    <div id="module-details" class="slide-in">
+        <div class="slide-in-header">
+            <!-- <h2 id="module-title">Module Title</h2>
+            <button class="close-button" onclick="closeSlideIn('module-details')">X</button> -->
+        </div>
+        <div class="slide-in-content" id="module-content">
+            <!-- Content loaded dynamically here -->
+        </div>
+    </div>
+
+    <script src="scripts1.js"></script>
+</body>
+</html>

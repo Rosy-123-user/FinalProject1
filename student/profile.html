@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - E-Shuri</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="profile-page" class="slide-in profile-slide-in">
+        <div class="slide-in-header profile-header">
+            <h2>Profile</h2>
+            <button class="close-button" onclick="closeSlideIn('profile-page')">X</button>
+        </div>
+        <div class="slide-in-content profile-content">
+            <form>
+                <label for="student-number">Student Number:</label>
+                <input type="text" id="student-number" name="student-number" placeholder="123456789" readonly>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="********">
+
+                <label for="university">University:</label>
+                <input type="text" id="university" name="university" placeholder="African Leadership University" readonly>
+
+                <label for="degree">Degree Program:</label>
+                <input type="text" id="degree" name="degree" placeholder="BSc Computer Science" readonly>
+
+                <label for="year">Year of Study:</label>
+                <input type="text" id="year" name="year" placeholder="2nd Year" readonly>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="+1234567890">
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="123 Main St, City, Country"></textarea>
+
+                <input type="submit" value="Update Profile">
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

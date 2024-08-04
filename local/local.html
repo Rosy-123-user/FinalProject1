@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Local School Administrator Portal</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body class="admin-page">
+    <header>
+        <div class="logo">
+            <h1>E-Shuri - Local School Administrator Portal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="local.html">Dashboard</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">                        
+                        <a href="settings.html">Settings</a>
+                        <a href="#profile">Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="university-name">
+        <h2>African Leadership University</h2>
+    </div>
+
+    <section id="activities">
+        <h2>Activities</h2>
+        <div class="activity-list">
+            <div class="activity" onclick="openSlideIn('manage-acct.html')">Manage Accounts</div>
+            <div class="activity" onclick="openSlideIn('manage-rs.html')">Manage Resources</div>
+            <div class="activity" onclick="openSlideIn('activity-log.html')">Activity Log</div>
+            <div class="activity" onclick="openSlideIn('access-control.html')">Access Control</div>
+            <div class="activity" onclick="openSlideIn('data-sub.html')">Database and Data Submission</div>
+            <div class="activity" onclick="openSlideIn('support.html')">Request Support</div>
+            <div class="activity" onclick="openSlideIn('troubleshoot.html')">Troubleshooting</div>
+            <div class="activity" onclick="openSlideIn('messages.html')">Messages</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+    
+    <!-- Container for slide-ins -->
+    <div id="slide-in-container"></div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>

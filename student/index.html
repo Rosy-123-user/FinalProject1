@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="student-page">
+    <header>
+        <h1>E-Shuri - Student Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="index.html">Dashboard</a></li>                
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#resources">General Resources</a></li>
+                <li><a href="#library">Library</a></li>
+                <li><a href="#discussions">Discussions</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="javascript:void(0)" onclick="openSlideIn('profile.html')">Profile</a>
+                        <a href="javascript:void(0)" onclick="openSlideIn('help.html')">Help/Support</a>
+                        <a href="javascript:void(0)" onclick="openSlideIn('settings.html')">Settings</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="university-name">
+        <h2>African Leadership University</h2>
+    </div>
+
+    <section id="alerts">
+        <h2>Alerts</h2>
+        <div class="alert-list">
+            <div class="alert">Announcement: New module available!</div>
+            <div class="alert">Message: You have a new message from Prof. Smith</div>
+            <div class="alert">Deadline: Assignment 3 due tomorrow</div>
+            <div class="alert">Office Hours: Reminder for tomorrow's office hours</div>
+        </div>
+    </section>
+
+    <section id="modules">
+        <h2>Modules</h2>
+        <div class="module-list">
+            <div class="module" onclick="openSlideIn('module-details-page')">Introduction to Computer Science</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Data Structures and Algorithms</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Operating Systems</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Database Systems</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Computer Networks</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Software Engineering</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Artificial Intelligence</div>
+            <div class="module" onclick="openSlideIn('module-details-page')">Web Development</div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>General Resources</h2>
+        <div class="resource-list">
+            <div class="resource" onclick="openSlideIn('english-class.html')">English Class</div>
+            <div class="resource" onclick="openSlideIn('disability.html')">Accessibility Settings</div>
+            <div class="resource" onclick="openSlideIn('messages.html')">Messages</div>
+        </div>
+    </section>
+
+    <section id="library">
+        <h2>Online Library</h2>
+        <div class="library" onclick="openSlideIn('library-page')">Access online library resources here.</div>
+    </section>
+
+    <section id="discussions">
+        <h2>Discussions</h2>
+        <div class="discussion-list">
+            <div class="discussion" onclick="openSlideIn('discussion-page')">Participate in discussions and forums here.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+
+    <!-- Slide-In Pages Container -->
+    <div id="slide-in-container"></div>
+
+    <!-- the chat bot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <df-messenger
+    intent="WELCOME"
+    chat-title="studybuddy"
+    agent-id="b78e5187-e69a-4568-aa05-7fda9705a02e"
+    language-code="en"
+    ></df-messenger>
+
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

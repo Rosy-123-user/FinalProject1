@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Ministry of Education Portal</title>
+    <link rel="stylesheet" href="styles3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="ministry-page">
+    <header>
+        <div class="logo">
+            <h1>E-Shuri - Ministry of Education Portal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="ministry.html">Dashboard</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="home.html">Home</a>
+                        <a href="#settings">Settings</a>
+                        <a href="#profile">Profile</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <section id="university-name">
+        <h2>African Leadership University</h2>
+    </section> -->
+
+    <section id="analytics">
+        <h2>Analytics Dashboard</h2>
+        <div class="analytics-cards">
+            <div class="card">
+                <canvas id="studentPerformanceChart"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="moduleEngagementChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>Activities</h2>
+        <div class="activity-list">
+            <div class="activity">View Resources and Modules</div>
+            <div class="activity">Monitor Accounts and Grades</div>
+            <div class="activity">Analyze Student Interactions</div>
+            <div class="activity" onclick="openSlideIn()">Generate Performance Reports</div>
+            <div class="activity">Request Support</div>
+            <div class="activity">Manage Policies</div>
+            <div class="activity">Communicate with Schools</div>
+            <div class="activity">Database and Data Management</div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+
+    <div id="report-slidein-container"></div>
+
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

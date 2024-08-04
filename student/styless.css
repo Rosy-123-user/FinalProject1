@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slide-in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.slide-in.open {
+    transform: translateX(0);
+}
+
+.slide-in-header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-in-content {
+    padding: 1em;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.submit-button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #003366;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.high-contrast {
+    background-color: #000;
+    color: #FFF;
+}
+
+.font-small { font-size: 12px; }
+.font-medium { font-size: 16px; }
+.font-large { font-size: 20px; }
+
+#accessibility-settings {
+    position: fixed;
+    right: -300px; /* Initially hidden off-screen */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+#accessibility-settings.visible {
+    right: 0; /* Slide in when visible */
+}
+
+#accessibility-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* Ensure it is above the slide-in panel */
+}
+
+body.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast a {
+    color: yellow;
+}
+
+body.high-contrast .module, 
+body.high-contrast .resource, 
+body.high-contrast .library, 
+body.high-contrast .discussion {
+    background-color: darkgray;
+    color: white;
+}
+
+body.high-contrast header, 
+body.high-contrast footer {
+    background-color: #333;
+    color: white;
+}
+

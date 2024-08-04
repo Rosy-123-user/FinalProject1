@@ -1,0 +1,575 @@
+/* Slide-In Page Styling */
+.slide-in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.slide-in-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+}
+
+.slide-in-content {
+    padding: 2em;
+    overflow-y: auto;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #ff5f5f;
+}
+
+/* Profile Page Specific Styles */
+.profile-slide-in form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-slide-in form label {
+    margin-top: 1em;
+}
+
+.profile-slide-in form input, 
+.profile-slide-in form textarea, 
+.profile-slide-in form select {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-slide-in form input[type="submit"] {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-slide-in form input[type="submit"]:hover {
+    background-color: #0055a5;
+}
+
+/* Messages Page Specific Styles */
+/* styles.css */
+
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: width 0.3s, height 0.3s;
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .chat-title {
+    font-size: 16px;
+  }
+  
+  .chat-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .chat-body {
+    display: block;
+    padding: 10px;
+  }
+  
+  .conversation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .conversation-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .conversation-list li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .chat-window {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chat-window-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .chat-back-btn {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow-y: auto;
+  }
+  
+  .chat-input {
+    display: flex;
+  }
+  
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .chat-input button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #003366;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  
+  .chat-enlarged {
+    width: 90%;
+    height: 80%;
+  }
+  
+  .chat-open .chat-body {
+    display: block;
+  }
+  
+  .chat-open .chat-window {
+    display: flex;
+  }
+  
+  df-messenger {
+    --df-messenger-bot-message: #e1ffc7;
+    --df-messenger-button-titlebar-color: #003366;
+    --df-messenger-chat-background-color: #fafafa;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 200px; /* Adjust width as necessary */
+    height: 300px;
+    border: none;
+    outline: none;
+    pointer-events: auto;
+  }
+    
+/* .messages-slide-in .message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.messages-slide-in .conversation {
+    background-color: #f1f1f1;
+    padding: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.messages-slide-in .conversation:hover {
+    background-color: #e1e1e1;
+}
+
+.messages-slide-in .full-view {
+    display: none;
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+} */
+
+/* English Class Page Specific Styles */
+.english-slide-in nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style-type: none;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.english-slide-in nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.english-slide-in nav ul li a {
+    display: block;
+    padding: 1em;
+    color: #003366;
+    text-decoration: none;
+}
+
+.english-slide-in nav ul li a:hover {
+    background-color: #e1e1e1;
+}
+
+.english-slide-in .section {
+    display: none;
+}
+
+.english-slide-in .section.active {
+    display: block;
+}
+
+
+.video-controls {
+    margin-top: 1em;
+}
+
+.video-controls button {
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.video-controls button:hover {
+    background-color: #0055a5;
+}
+
+
+#subtitles-container {
+    margin-top: 1em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5em;
+    border-radius: 4px;
+    font-size: 1.2em;
+    max-width: 100%;
+}
+
+/* Disability Settings Page Specific Styles */
+/* .disability-slide-in .form-group {
+    margin-top: 1em;
+}
+
+.disability-slide-in .form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.disability-slide-in .form-group input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+.disability-slide-in .form-group select {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+
+
+
+
+/* Student Dashboard Enhancements */
+/* Add styles for high contrast mode */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Add styles for font sizes */
+body.small {
+    font-size: 12px;
+}
+
+body.medium {
+    font-size: 16px;
+}
+
+body.large {
+    font-size: 20px;
+}
+
+body.student-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* University Name Styling */
+#university-name {
+    text-align: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Darker blue color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+section {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alerts Section Styling */
+#alerts {
+    padding: 2em;
+    background-color: white;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.alert {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modules Section Styling */
+.module-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.module {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* General Resources Styling */
+.resource-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.resource {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Library Section Styling */
+.library {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.library:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Discussion Section Styling */
+.discussion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.discussion {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.discussion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer for Student Page */
+body.student-page footer {
+    margin-top: auto;
+    background-color: #002244; 
+    color: white;
+    padding: 1em;
+    text-align: center;
+}

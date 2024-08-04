@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - E-Shuri</title>
+    <link rel="stylesheet" href="styles3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="report-slidein" class="slide-in">
+        <div class="slide-in-header">
+            <h2>Performance Report</h2>
+            <button class="close-button" onclick="closeSlideIn()">X</button>
+        </div>
+        <div class="slide-in-content">
+            <div class="left-menu">
+                <input type="text" id="search-bar" placeholder="Search by University...">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showSection('overall-performance')">Overall Performance</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('student-performance')">Student Performance</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('teacher-performance')">Teacher Performance</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('system-users')">System Users</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('relevant-metrics')">Relevant Metrics</a></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <div id="overall-performance" class="section active">
+                    <h3>Overall University Performance</h3>
+                    <canvas id="overallPerformanceChart"></canvas>
+                    <canvas id="gpaCompletionChart"></canvas>
+                    <canvas id="satisfactionEmploymentChart"></canvas>
+                </div>
+                <div id="student-performance" class="section">
+                    <h3>Student Performance</h3>
+                    <canvas id="enrollmentRetentionChart"></canvas>
+                    <canvas id="studentGpaCompletionChart"></canvas>
+                    <canvas id="dropoutSatisfactionChart"></canvas>
+                </div>
+                <div id="teacher-performance" class="section">
+                    <h3>Teacher Performance</h3>
+                    <canvas id="classSizeTeacherRatioChart"></canvas>
+                    <canvas id="evaluationDevelopmentChart"></canvas>
+                    <canvas id="researchPublicationsChart"></canvas>
+                </div>
+                
+                <div id="system-users" class="section">
+                    <h3>System Users</h3>
+                    <canvas id="userActivityChart"></canvas>
+                    <canvas id="userEngagementChart"></canvas>
+                    <canvas id="supportRequestsChart"></canvas>
+                </div>
+                
+                <div id="relevant-metrics" class="section">
+                    <h3>Relevant Metrics</h3>
+                    <canvas id="systemUptimeChart"></canvas>
+                    <canvas id="pageLoadTimeChart"></canvas>
+                    <canvas id="resourcesSecurityChart"></canvas>
+                    <canvas id="userDemographicsChart"></canvas>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

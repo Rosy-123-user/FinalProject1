@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Class - E-Shuri</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="english-class-page" class="slide-in english-slide-in">
+        <div class="slide-in-header english-header">
+            <h2>English Class</h2>
+            <button class="close-button" onclick="closeSlideIn('english-class-page')">X</button>
+        </div>
+        <div class="slide-in-content english-content">
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showSection('overview')">Overview</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('materials')">Materials</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('assignments')">Assignments</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('quizzes')">Quizzes</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('discussions')">Discussions</a></li>
+                </ul>
+            </nav>
+            <div id="overview" class="section active">
+                <h3>Course Description</h3>
+                <p>This English course is designed to improve your language skills...</p>
+            </div>
+            <div id="materials" class="section">
+                <h3>Materials</h3>
+                <ul>
+                    <li>Textbook: English 101</li>
+                    <li>Online Resources: Links to useful websites</li>
+                </ul>
+
+                <h4>Lecture Video</h4>
+                <video id="lecture-video" controls width="100%">
+                    <source src="./lecture_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button onclick="playVideo()">Play</button>
+                    <button onclick="pauseVideo()">Pause</button>
+                    <button onclick="stopVideo()">Stop</button>
+                </div>
+
+                <div id="subtitles-container">
+                    <p id="subtitles"></p>
+                </div>
+            </div>
+            <div id="assignments" class="section">
+                <h3>Assignments</h3>
+                <ul>
+                    <li>Assignment 1: Due Date</li>
+                    <li>Assignment 2: Due Date</li>
+                </ul>
+            </div>
+            <div id="quizzes" class="section">
+                <h3>Quizzes</h3>
+                <ul>
+                    <li>Quiz 1: Due Date</li>
+                    <li>Quiz 2: Due Date</li>
+                </ul>
+            </div>
+            <div id="discussions" class="section">
+                <h3>Discussions</h3>
+                <ul>
+                    <li>Discussion 1: Topic</li>
+                    <li>Discussion 2: Topic</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shuri - Home</title>
+    <link rel="stylesheet" href="styles0.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+        // Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDcpTJCxls7Vi2qR8KqMjGbZXAZeIoERFk",
+            authDomain: "e-shuri-4fa54.firebaseapp.com",
+            projectId: "e-shuri-4fa54",
+            storageBucket: "e-shuri-4fa54.appspot.com",
+            messagingSenderId: "318869097966",
+            appId: "1:318869097966:web:39107bd9aaf07cc825d2ff",
+            measurementId: "G-SDVV6HE6HV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var auth = firebase.auth();
+    </script>
+    <script src="scripts.js"></script>
+</head>
+<body class="home">
+    <header>
+        <div class="logo">
+            <h1>E-Shuri</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to E-Shuri</h2>
+        <p>Your comprehensive education platform.</p>
+        <a href="#login" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="about">
+        <h2>About E-Shuri</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>E-Shuri is designed to provide students and teachers with all the resources they need for a successful learning experience. Explore modules, access resources, participate in discussions, and much more. E-Shuri was created by Roseline Niyigaba, who is passionate about improving educational experiences through technology.</p>
+            </div>
+            <div class="about-features">
+                <h3>Platform Features</h3>
+                <ul>
+                    <li>Augmented Reality (AR) for interactive learning</li>
+                    <li>Artificial Intelligence (AI) for personalized education</li>
+                    <li>Comprehensive English courses</li>
+                    <li>Detailed grade tracking and reporting</li>
+                    <li>Analytics and data generation for the Ministry of Education...etc</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <div class="login-options">
+            <div class="option" onclick="openLoginForm('Student')">
+                <h3>Student</h3>
+                <p>Access your courses and resources.</p>
+            </div>
+            <div class="option" onclick="openLoginForm('Local Admin')">
+                <h3>Local Admin</h3>
+                <p>Manage school data and user accounts.</p>
+            </div>
+            <div class="option" onclick="openLoginForm('Teacher')">
+                <h3>Teacher</h3>
+                <p>Upload resources and manage grades.</p>
+            </div>
+            <div class="option" onclick="openLoginForm('Ministry')">
+                <h3>Ministry</h3>
+                <p>View and analyze educational data.</p>
+            </div>
+            <div class="option" onclick="openLoginForm('Admin')">
+                <h3>Admin</h3>
+                <p>Full access to the platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_contact_form" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="contact-email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Shuri</p>
+    </footer>
+    <div id="loginForm" class="login-form-container">
+        <div class="login-form">
+            <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+            <h2 id="loginFormTitle">Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* Ensure Full Page Height for Ministry Page */
+body.ministry-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* University Name Styling */
+#university-name {
+    text-align: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+
+
+/* Header Styling */
+header {
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-align: center; /* Center align text */
+}
+
+header nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5em; /* Add margin to separate from logo */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003366; /* Darker blue color */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0055a5; /* Slightly lighter blue for hover */
+}
+
+/* Analytics Section Styling */
+#analytics {
+    padding: 2em;
+    background-color: #f9f9f9;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.analytics-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Activities Section Styling */
+.activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.activity {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 300px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer for Ministry Page */
+body.ministry-page footer {
+    margin-top: auto;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+
+
+/* the report and analysis page */
+
+/* Slide-In Panel Styling */
+.slide-in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.slide-in-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #003366; /* Darker blue color */
+    color: white;
+}
+
+.slide-in-content {
+    display: flex;
+    height: calc(100% - 60px); /* Adjust based on header height */
+}
+
+.left-menu {
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-menu ul li {
+    margin-bottom: 1em;
+}
+
+.left-menu ul li a {
+    color: #003366;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.left-menu ul li a:hover {
+    background-color: #ddd;
+}
+
+.right-panel {
+    width: 75%;
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px
+}

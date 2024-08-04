@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disability Settings - E-Shuri</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div id="disability-settings-page" class="slide-in">
+        <div class="slide-in-header">
+            <h2>Accessibility Settings</h2>
+            <button class="close-button" onclick="closeSlideIn('disability-settings-page')">X</button>
+        </div>
+        <div class="slide-in-content">
+            <h3>Accessibility Options</h3>
+            <form id="accessibility-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="screen-reader">Enable Speech-to-Text:</label>
+                    <input type="checkbox" id="speech-to-text" name="speech-to-text">
+                </div>
+                <div class="form-group">
+                    <label for="text-to-speech">Enable Text-to-Speech:</label>
+                    <input type="checkbox" id="text-to-speech" name="text-to-speech">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="subtitles">Subtitles for Video Lectures:</label>
+                    <input type="checkbox" id="subtitles" name="subtitles">
+                </div> -->
+                <div class="form-group">
+                    <label for="high-contrast">High Contrast Mode:</label>
+                    <input type="checkbox" id="high-contrast-toggle" name="high-contrast">
+                </div>
+                <div class="form-group">
+                    <label for="font-size">Font Size:</label>
+                    <select id="font-size" name="font-size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <input type="button" value="Save Settings" class="submit-button" onclick="saveSettings()">
+            </form>
+        </div>
+    </div>
+
+    <div id="audio-player" style="display:none;">
+        <h3>Text-to-Speech Audio:</h3>
+        <audio controls id="tts-audio">
+            <source id="tts-source" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div id="transcript" style="display:none;">
+        <h3>Speech-to-Text Transcript:</h3>
+        <p id="stt-text"></p>
+    </div>
+
+    <script src="./scripts/scripts.js"></script>
+</body>
+</html>

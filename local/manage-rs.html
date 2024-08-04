@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Resources</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div id="manage-resources-page" class="slide-in manage-resources-slide-in">
+        <div class="slide-in-header">
+            <h2>Manage Resources</h2>
+            <button class="close-button" onclick="closeSlideIn('manage-resources-page')">X</button>
+        </div>
+        <div class="slide-in-content">
+            <div class="details-header">
+                <input type="text" id="resource-search-bar" placeholder="Search by keywords, tags, or categories...">
+                <button class="add-button">Add Resource</button>
+            </div>
+            <div class="filters">
+                <label for="module-filter">Module:</label>
+                <select id="module-filter">
+                    <option value="">Select Module</option>
+                    <option value="module1">Module 1</option>
+                    <option value="module2">Module 2</option>
+                </select>
+                <label for="document-filter">Documents:</label>
+                <select id="document-filter">
+                    <option value="">Select Document</option>
+                    <option value="doc1">Document 1</option>
+                    <option value="doc2">Document 2</option>
+                </select>
+                <label for="video-filter">Videos:</label>
+                <select id="video-filter">
+                    <option value="">Select Video</option>
+                    <option value="video1">Video 1</option>
+                    <option value="video2">Video 2</option>
+                </select>
+                <label for="exam-filter">Exams:</label>
+                <select id="exam-filter">
+                    <option value="">Select Exam</option>
+                    <option value="exam1">Exam 1</option>
+                    <option value="exam2">Exam 2</option>
+                </select>
+                <label for="quiz-filter">Quizzes:</label>
+                <select id="quiz-filter">
+                    <option value="">Select Quiz</option>
+                    <option value="quiz1">Quiz 1</option>
+                    <option value="quiz2">Quiz 2</option>
+                </select>
+                <label for="teacher-filter">Teachers:</label>
+                <select id="teacher-filter">
+                    <option value="">Select Teacher</option>
+                    <option value="teacher1">Teacher 1</option>
+                    <option value="teacher2">Teacher 2</option>
+                </select>
+                <button class="filter-button">Apply Filters</button>
+            </div>
+            <div class="resource-list">
+                <!-- Resource items will be dynamically loaded here -->
+                <div class="resource-item">
+                    <h4>Resource Title 1</h4>
+                    <div class="resource-actions">
+                        <button class="action-button">View</button>
+                        <button class="action-button">Edit</button>
+                        <button class="action-button">Delete</button>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <h4>Resource Title 2</h4>
+                    <div class="resource-actions">
+                        <button class="action-button">View</button>
+                        <button class="action-button">Edit</button>
+                        <button class="action-button">Delete</button>
+                    </div>
+                </div>
+                <!-- Add more resource items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>

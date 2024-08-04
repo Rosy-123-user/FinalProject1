@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div id="activity-log-page" class="slide-in activity-log-slide-in">
+        <div class="slide-in-header">
+            <h2>Activity Log</h2>
+            <button class="close-button" onclick="closeSlideIn('activity-log-page')">X</button>
+        </div>
+        <div class="slide-in-content">
+            <div class="log-filters">
+                <h3>Filters:</h3>
+                <label for="date-filter">Date:</label>
+                <input type="date" id="date-filter">
+                
+                <label for="user-filter">User:</label>
+                <input type="text" id="user-filter" placeholder="Enter username">
+                
+                <label for="action-type-filter">Action Type:</label>
+                <select id="action-type-filter">
+                    <option value="">Select Action</option>
+                    <option value="added">Added</option>
+                    <option value="removed">Removed</option>
+                    <option value="edited">Edited</option>
+                </select>
+                
+                <button class="filter-button">Apply Filters</button>
+            </div>
+            <div class="log-details">
+                <h3>Log Details:</h3>
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-entries">
+                        <!-- Log entries will be dynamically loaded here -->
+                        <tr>
+                            <td>2024-06-14</td>
+                            <td>JohnDoe</td>
+                            <td>Added</td>
+                            <td>Added a new resource</td>
+                            <td><button class="view-button" onclick="viewLogDetails(this)">View</button></td>
+                        </tr>
+                        <tr>
+                            <td>2024-06-13</td>
+                            <td>JaneSmith</td>
+                            <td>Edited</td>
+                            <td>Edited resource details</td>
+                            <td><button class="view-button" onclick="viewLogDetails(this)">View</button></td>
+                        </tr>
+                        <!-- Add more log entries as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="export-logs">
+                <h3>Export Logs:</h3>
+                <button class="export-button" onclick="exportLogs()">Export Logs</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts2.js"></script>
+</body>
+</html>
